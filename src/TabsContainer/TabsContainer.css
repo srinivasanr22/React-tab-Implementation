@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    padding: 1.25rem;
+}
+
+.tabs-container {
+    display: flex;
+    border: 2px solid #ECECEC;
+    height: 80vh;
+    width: 100%;
+}

@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import TabsContainer from './TabsContainer/TabsContainer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div className="app">
+      <header className="app-header">
+        <span
+          className="app-link"
         >
-          Learn React
-        </a>
+          Tabs Implementation with React
+        </span>
       </header>
+       <TabsContainer/>
     </div>
   );
 }

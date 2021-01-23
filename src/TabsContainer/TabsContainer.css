@@ -1,11 +1,34 @@
 .container {
-    display: flex;
     padding: 1.25rem;
 }
 
 .tabs-container {
-    display: flex;
     border: 2px solid #ECECEC;
     height: 80vh;
     width: 100%;
+}
+
+.tab-header {
+    height: 35px;
+    border-bottom: 2px solid #ECECEC;
+    width: 100%;
+    background: #ECECEC;
+    opacity: 0.75;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    overflow: hidden;
+}
+
+.tab-content {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.disable-add-icon {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
 }

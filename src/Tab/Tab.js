@@ -1,7 +1,13 @@
-function Tab() {
+import './Tab.css';
+
+function Tab(props) {
+    const {tabName, index, activeTab, handleTab} = props;
     return (
-      <div className="tab">
-         Welcome - Tab - component
+      <div className={`tab ${activeTab === index ? 'active' : ''}`} 
+      onClick={() => {
+        handleTab(index);
+      }} >
+       {tabName}
       </div>
     );
   }

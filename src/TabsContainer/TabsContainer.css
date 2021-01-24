@@ -31,6 +31,10 @@
     overflow: hidden;
 }
 
+.flex-start {
+    justify-content: flex-start;
+}
+
 .tab-content {
     display: flex;
     justify-content: center;

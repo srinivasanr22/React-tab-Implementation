@@ -1,11 +1,24 @@
 
 .tab {
     cursor: pointer;
-    min-width: 200px;
+    min-width: 175px;
     text-align: center;
 }
 
 .active {
     border-bottom: 2px solid #282c34;
     padding: 6px;
+}
+
+.tab .close-icon {
+    opacity: 0.5;
+    visibility: hidden;
+    margin-left: 5px;
+    padding-bottom: -13px;
+    position: relative;
+    top: -5px;
+}
+
+.tab:hover .close-icon {
+    visibility: visible;
 }

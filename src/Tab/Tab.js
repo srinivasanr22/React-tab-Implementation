@@ -6,7 +6,7 @@ function Tab(props) {
       <div className={`tab ${activeTab === index ? 'active' : ''}`} 
       onClick={() => {
         handleTab(index);
-      }} >
+      }}>
        {tabName}
       </div>
     );

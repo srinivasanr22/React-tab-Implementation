@@ -20,14 +20,11 @@ function Tab(props) {
         onDragOver={ev => ev.preventDefault()}
         onDragStart={handleDrag}
         onDrop={handleDrop}
+        onClick={() => {
+          setActiveTab(index);
+        }}
       >
-        <span
-          onClick={() => {
-            setActiveTab(index);
-          }}
-        >
-          {tab.tabName}
-        </span>
+        {tab.tabName}
         {index > 2 ? (
           <span className="close-icon">
             <AiFillCloseCircle onClick={() => removeAddedTab(index)} />

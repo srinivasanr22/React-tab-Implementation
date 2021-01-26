@@ -62,15 +62,15 @@ function Tab(props) {
         </span>
         <div className="btn-group">
           <button
-            className="btn action"
-            onClick={e => handleSubmit(true)}
+            className="btn primary"
+            onClick={() => handleSubmit(true)}
             type="submit"
           >
             Yes
           </button>
           <button
-            className="btn non-action"
-            onClick={e => handleSubmit(false)}
+            className="btn"
+            onClick={() => handleSubmit(false)}
             type="button"
           >
             No

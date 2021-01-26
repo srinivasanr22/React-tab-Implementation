@@ -1,7 +1,10 @@
-import "./Tab.css";
+import React, { useState } from "react";
+import Modal from "../Modal/Modal";
 import { AiFillCloseCircle } from "react-icons/ai";
+import "./Tab.css";
 
 function Tab(props) {
+  const [showModal, updateModal] = useState(false);
   const {
     tab,
     index,
@@ -11,6 +14,25 @@ function Tab(props) {
     handleDrag,
     handleDrop
   } = props;
+
+  /**
+   * function will hide the modal & remove the selected tab.
+   * @param {Boolean} tobeRemoved - If flag is true invoke
+   * delete function to its parent component.
+   */
+  const handleSubmit = tobeRemoved => {
+    tobeRemoved && removeAddedTab(index);
+    toggleModal();
+  };
+
+  /**
+   * This function will show / hide the modal.
+   * @param {boolean} state - to represent the next state for modal.
+   */
+  const toggleModal = (state = false) => {
+    updateModal(state);
+  };
+
   return (
     <>
       <div
@@ -27,12 +49,34 @@ function Tab(props) {
         {tab.tabName}
         {index > 2 ? (
           <span className="close-icon">
-            <AiFillCloseCircle onClick={() => removeAddedTab(index)} />
+            <AiFillCloseCircle onClick={() => toggleModal(true)} />
           </span>
         ) : (
           ""
         )}
       </div>
+      <Modal show={showModal} handleClose={e => toggleModal(false)}>
+        <div className="title">Delete Confirmation:</div>
+        <span className="info-text">
+          {`Are you sure ? do you want to remove this tab "${tab.tabName}"`}
+        </span>
+        <div className="btn-group">
+          <button
+            className="btn action"
+            onClick={e => handleSubmit(true)}
+            type="submit"
+          >
+            Yes
+          </button>
+          <button
+            className="btn non-action"
+            onClick={e => handleSubmit(false)}
+            type="button"
+          >
+            No
+          </button>
+        </div>
+      </Modal>
     </>
   );
 }

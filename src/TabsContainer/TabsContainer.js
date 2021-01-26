@@ -3,6 +3,7 @@ import Tab from "../Tab/Tab";
 import "./TabsContainer.css";
 import { FaAngleLeft, FaAngleRight, FaPlus } from "react-icons/fa";
 
+// some constants.
 const TAB_LIMIT = 10; // Maxlimit to add tabs.
 const TAB_PREFIX = "Tab"; // TabPrefix.
 const TAB_LIST = [
@@ -125,7 +126,7 @@ function TabsContainer() {
       }
       return tab;
     });
-    // updating into states.
+    // update state.
     setTabs(newTabState);
   };
 

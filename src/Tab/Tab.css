@@ -21,3 +21,34 @@
 .tab:hover .close-icon {
   visibility: visible;
 }
+
+.btn-group {
+  margin-top: 15px;
+  display: flex;
+  align-items: self-start;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+.btn {
+  border-radius: 2px;
+  border: 0;
+  height: 25px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.action {
+  background: #282c34;
+  color: #61dafb;
+}
+
+.title {
+  margin: 10px 0px 10px 0px;
+}
+
+.info-text {
+  font-size: 14px;
+  text-align: left;
+  padding: 1px;
+}
